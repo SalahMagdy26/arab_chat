@@ -1,3 +1,4 @@
+import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/pages/intro_page.dart';
 import 'package:chat_app/pages/login_page.dart';
 import 'package:chat_app/pages/user_info_page.dart';
@@ -33,6 +34,7 @@ class ArabChats extends StatelessWidget {
             'IntroPage': (context)=>const IntroPage(),
             'VerificationPage': (context)=>const VerificationPage(),
             'UserInfoPage': (context)=>const UserInfoPage(),
+            'ChatPage': (context)=>const ChatPage(),
           },
           home: child,
         );

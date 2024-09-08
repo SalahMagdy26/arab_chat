@@ -166,7 +166,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, 'ChatPage');
                 },
                 child: SizedBox(
                   width: 120.w,
