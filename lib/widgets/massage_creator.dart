@@ -1,7 +1,6 @@
+import 'package:chat_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
 
 class CreatingMassageWidgets extends StatefulWidget {
   const CreatingMassageWidgets({super.key});
@@ -16,7 +15,7 @@ class _CreatingMassageWidgetsState extends State<CreatingMassageWidgets> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           width: MediaQuery.of(context).size.width - 80,
@@ -31,6 +30,10 @@ class _CreatingMassageWidgetsState extends State<CreatingMassageWidgets> {
             },
             maxLines: 5,
             minLines: 1,
+            cursorColor: Colors.black38,
+            style: const TextStyle(
+              fontFamily: 'araby'
+            ),
             decoration: InputDecoration(
               hintText: 'Write massage here',
               contentPadding: EdgeInsets.symmetric(horizontal: 12.w),
@@ -46,13 +49,11 @@ class _CreatingMassageWidgetsState extends State<CreatingMassageWidgets> {
               fillColor: const Color(0xffEAECEE),
               filled: true,
               prefixIcon: IconButton(
-                alignment: Alignment.bottomLeft,
                 color: Colors.black38,
                 onPressed: () {},
                 icon: const Icon(Icons.emoji_emotions_outlined),
               ),
               suffixIcon: IconButton(
-
                 onPressed: () {},
                 icon: const Icon(
                   Icons.attachment_rounded,
@@ -62,16 +63,27 @@ class _CreatingMassageWidgetsState extends State<CreatingMassageWidgets> {
             ),
           ),
         ),
+        SizedBox(
+          width: 7.w,
+        ),
         (isEmpty)
-            ? Image.asset(
-                'assets/images/mic.png',
-                width: 50,
-                height: 50,
+            ? CircleAvatar(
+                radius: 28.r,
+                backgroundColor: kBasicColor,
+                child: const Icon(
+                  Icons.mic,
+                  color: Colors.white,
+                  size: 32,
+                ),
               )
-            : Image.asset(
-                'assets/images/send.png',
-                width: 50,
-                height: 50,
+            : CircleAvatar(
+                radius: 28.r,
+                backgroundColor: kBasicColor,
+                child: const Icon(
+                  Icons.send_rounded,
+                  color: Colors.white,
+                  size: 32,
+                ),
               ),
       ],
     );

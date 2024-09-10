@@ -93,6 +93,16 @@ flutter:
           weight: 400
         - asset: assets/fonts/SUSE-ExtraLight.ttf
           weight: 300
+    - family: araby
+      fonts:
+        - asset: assets/fonts/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/IBMPlexSansArabic-ExtraLight.ttf
+          weight: 300
+        - asset: assets/fonts/IBMPlexSansArabic-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/IBMPlexSansArabic-Bold.ttf
+          weight: 900
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
