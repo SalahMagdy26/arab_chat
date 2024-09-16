@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../widgets/verification_text_field.dart';
 
 class VerificationPage extends StatelessWidget {
-  const VerificationPage({super.key});
-
+  const VerificationPage({super.key,required this.verificationId});
+  final String verificationId;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +62,7 @@ class VerificationPage extends StatelessWidget {
                 SizedBox(
                   height: 8.h,
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     VCTextField(),

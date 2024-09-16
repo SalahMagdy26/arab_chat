@@ -74,35 +74,28 @@ class ChattingPrivatePage extends StatelessWidget {
               child: const Column(
                 children: [
 
-                  DateOfTheChat(
-                    text: 'Today',
-                  ),
+                  DateOfTheChat(text: 'Yesterday'),
 
                   CustomTextMassage(
                       messageType: MessageType.send,
                       message: 'مرحبا أيها المتكاسل الصغير',
                       backGColor: kBasicColor),
 
-                  DateOfTheChat(
-                    text: 'Today',
-                  ),
-
-                  DateOfTheChat(text: 'Yesterday'),
-
                   CustomTextMassage(
                       message: 'هلا والله يا ولدي ',
-                      messageType: MessageType.send,
+                      messageType: MessageType.receive,
                       backGColor: kBasicColor),
 
                   DateOfTheChat(
                     text: 'Today',
                   ),
-                  DateOfTheChat(text: 'Yesterday'),
+
                   CustomTextMassage(
                       message: 'السلام عليكم ورحمة الله وبركاته',
                       messageType: MessageType.receive,
                       backGColor: Colors.white),
                   CustomRecordMassage(messageType: MessageType.send,),
+                  CustomRecordMassage(messageType: MessageType.receive,),
                 ],
               ),
             ),

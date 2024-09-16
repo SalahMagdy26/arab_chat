@@ -4,13 +4,17 @@ import 'package:flutter/services.dart';
 import '../constants.dart';
 
 class VCTextField extends StatelessWidget {
-  const VCTextField({super.key});
-
+   VCTextField({super.key});
+  final TextEditingController verificationCode = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
       width: 50,
       child: TextFormField(
+        onFieldSubmitted: (data){
+          print(data);
+        },
+        controller: verificationCode,
         textAlign: TextAlign.center,
         inputFormatters: [
           LengthLimitingTextInputFormatter(1),

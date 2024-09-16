@@ -1,6 +1,8 @@
 import 'package:chat_app/constants.dart';
+import 'package:chat_app/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -13,6 +15,7 @@ class _IntroPageState extends State<IntroPage> {
   int selectedValue = 1;
   @override
   Widget build(BuildContext context) {
+    final ap = Provider.of<AuthProvider>(context,listen: false);
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Padding(
@@ -105,6 +108,8 @@ class _IntroPageState extends State<IntroPage> {
                 SizedBox(height: 60.h,),
                 GestureDetector(
                   onTap: (){
+                    ap.isSignedIn == true ?
+                        Navigator.pushNamed(context, 'ChatPage'):
                     Navigator.pushNamed(context, 'LoginPage');
                   },
                   child: SizedBox(
